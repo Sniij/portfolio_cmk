@@ -25,7 +25,7 @@
 				<!-- Intro -->
 					<div id="intro">
 						<h1> Keycho's Web</h1>
-						<p style="font-family: 'KBO-Dia-Gothic_bold'; font-weight: 400; font-style: normal; font-size: 30px; margin-top: 1vh;">안녕하세요. <br/> 좋아하고 잘 할 수 있는 것이 무엇인지 7년 동안 고민하여, <br/>현재는 백엔드 개발자를 꿈꾸게된 조만기입니다. </a></p>
+						<p style="font-family: 'KBO-Dia-Gothic_bold'; font-weight: 400; font-style: normal; font-size: 30px;">안녕하세요. <br/> 좋아하고 잘 할 수 있는 것이 무엇인지 7년 동안 고민하여, <br/>현재는 백엔드 개발자를 꿈꾸게된 조만기입니다. </a></p>
 						<ul class="actions">
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 						</ul>
@@ -59,9 +59,33 @@
 									<p style="font-family: 'KBO-Dia-Gothic_bold'; font-style: normal;">포트폴리오 용도로 제작한 웹사이트 입니다. 현재 이 사이트에 해당합니다.</p>
 								</header><a href="javascript:window.scrollTo( 0, 1450 )" class="image main">
 								<img src="images/main.png" alt="" /></a>
-								<ul class="actions special">
+								
+								<ul class="actions special">						
 									<li><a href="#" class="button large">Full Story</a></li>
 								</ul>
+<!-- Button trigger modal -->
+<button type="button" class="button large" data-bs-toggle="modal" data-bs-target="#exampleModal">
+	Full Story
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="background-color: rgb(255, 255, 255); height: 100%;">
+	<div class="modal-dialog modal-fullscreen-sm-down">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h1 class="modal-title fs-5" id="exampleModalLabel">Project 1</h1>
+
+		</div>
+		<h2 style="margin-left: 40px; margin-right: 40px; text-align: left; ">h2입니다.h2입니다h2입니다h2입니다h2입니다h2입니다h2입니다h2입니다h2입니다h2입니다h2입니다h2입니다h2입니다h2입니다h2입니다h2입니다h2입니다h2입니다h2입니다</h2>
+		<div id="markdown-container"></div>
+		<div style="margin-left: 40px; margin-right: 40px; text-align: left; ">asdasdasdas</div>
+
+		<div class="modal-footer" style="position: fixed; bottom: 15px; width: 100%;">
+		  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+		</div>
+	  </div>
+	</div>
+  </div>
 							</article>
 
 						<!-- Posts -->
@@ -178,6 +202,20 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script src="assets/js/marked.min.js"></script>
+			<script src="assets/js/bootstrap.min.js"></script>
+			<script src="assets/js/showdown.min.js"></script>
+			<script>
+				// 마크다운 텍스트
+				var markdownText = "---";
+			  
+				// 마크다운을 HTML로 변환
+				var converter = new showdown.Converter();
+				var htmlText = converter.makeHtml(markdownText);
+			  
+				// 변환된 HTML을 div 요소에 삽입
+				var markdownContainer = document.getElementById("markdown-container");
+				markdownContainer.innerHTML = htmlText;
+			  </script>
 	</body>
 </html>
