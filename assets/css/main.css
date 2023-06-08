@@ -188,11 +188,12 @@ video.bg-video {
 
 		}
 
-		@media screen and (max-width: 360px) {
+		@media screen and (max-width: 400px) {
 
 			html {
 				font-size: 10pt;
 			}
+
 
 		}
 
@@ -3442,8 +3443,8 @@ video.bg-video {
 		}
 
 		#intro p {
-			font-size: 1.25rem;
-			font-style: italic;
+			font-size: 1.5rem;
+			font-style: normal;
 			margin-top: -0.25rem;
 			text-align: center;
 		}
@@ -3504,12 +3505,8 @@ video.bg-video {
 
 			#intro {
 				padding: 4rem 4rem 2rem 4rem ;
-				min-height: 90vh;
+				min-height: 20vh;
 			}
-
-				#intro p br {
-					display: none;
-				}
 
 				#intro + #header {
 					margin-top: -14rem;
@@ -3521,7 +3518,7 @@ video.bg-video {
 
 			#intro {
 				padding: 3rem 2rem 1rem 2rem ;
-				min-height: 80vh;
+				min-height: 50vh;
 			}
 
 				#intro h1 {
@@ -3531,7 +3528,7 @@ video.bg-video {
 				}
 
 				#intro p {
-					font-size: 1rem;
+					font-size: 1.25rem;
 					margin-top: 0rem;
 				}
 
@@ -3540,7 +3537,30 @@ video.bg-video {
 				}
 
 		}
+		@media screen and (max-width: 400px) {
 
+			#intro {
+				padding: 3rem 2rem 1rem 2rem ;
+				min-height:40vh;
+			}
+
+				#intro h1 {
+					font-size: 3.00rem;
+					line-height: 1.1;
+					margin-bottom: 1rem;
+				}
+
+				#intro p {
+					font-size: 1.15rem;
+					font-weight: 300;
+					margin-top: 0rem;
+				}
+
+				#intro .actions {
+					display: none;
+				}
+
+		}
 /* Header */
 
 	#header {
