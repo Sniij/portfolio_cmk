@@ -185,16 +185,28 @@ video.bg-video {
 			html {
 				font-size: 11pt;
 			}
-
+			#modal_inContent{
+				padding: 0rem 2rem 3rem 2rem;
+			}
 		}
+		@media screen and (min-width: 1280px) {
 
+			#modal_inContent{
+				padding: 0rem 6rem 3rem 6rem;
+				font-family: 'Pretendard-Regular';
+				font-size: 13pt;
+				
+			}
+		}
 		@media screen and (max-width: 400px) {
 
 			html {
 				font-size: 10pt;
 			}
 
-
+			#modal_inContent{
+				padding: 0rem 1rem 3rem 1rem;
+			}
 		}
 
 	body {
@@ -3504,7 +3516,7 @@ video.bg-video {
 		@media screen and (max-width: 980px) {
 
 			#intro {
-				padding: 4rem 4rem 2rem 4rem ;
+				padding: 2rem 4rem 2rem 4rem ;
 				min-height: 20vh;
 			}
 
@@ -3517,8 +3529,8 @@ video.bg-video {
 		@media screen and (max-width: 736px) {
 
 			#intro {
-				padding: 3rem 2rem 1rem 2rem ;
-				min-height: 50vh;
+				padding: 3rem 2rem 3rem 2rem ;
+				min-height: 45vh;
 			}
 
 				#intro h1 {
@@ -3537,21 +3549,21 @@ video.bg-video {
 				}
 
 		}
-		@media screen and (max-width: 400px) {
+		@media screen and (max-width: 500px) {
 
 			#intro {
-				padding: 3rem 2rem 1rem 2rem ;
-				min-height:40vh;
+				padding: 1rem 2rem 1rem 2rem ;
+				min-height: 35vh;
 			}
 
 				#intro h1 {
-					font-size: 3.00rem;
+					font-size: 2.8rem;
 					line-height: 1.1;
 					margin-bottom: 1rem;
 				}
 
 				#intro p {
-					font-size: 1.15rem;
+					font-size: 1.10rem;
 					font-weight: 300;
 					margin-top: 0rem;
 				}
@@ -3560,6 +3572,35 @@ video.bg-video {
 					display: none;
 				}
 
+		}
+		@media screen and (max-width: 345px) {
+
+			#intro {
+				padding: 1rem 2rem 1rem 2rem ;
+				min-height: 35vh;
+			}
+
+				#intro h1 {
+					font-size: 2.5rem;
+					line-height: 1.1;
+					margin-bottom: 1rem;
+				}
+
+				#intro p {
+					font-size: 1.10rem;
+					font-weight: 300;
+					margin-top: 0rem;
+				}
+
+				#intro .actions {
+					display: none;
+				}
+			#modal_portfolio h1{
+				font-size: 3rem;
+			}
+			#modal_dowajoyak h1{
+				font-size: 3rem;
+			}
 		}
 /* Header */
 
