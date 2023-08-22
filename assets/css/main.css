@@ -108,6 +108,7 @@ video.bg-video {
 .modal .modal__closeBtn{
 	background-color: #3498db;
 }
+
 .hidden{
 	display: none;
 }
@@ -228,7 +229,6 @@ video.bg-video {
 		border-bottom: dotted 1px;
 		text-decoration: none;
 	}
-
 		a:hover {
 			border-bottom-color: transparent;
 		}
@@ -366,6 +366,8 @@ video.bg-video {
 			border-bottom-color: transparent;
 			color: #18bfef !important;
 		}
+	
+
 
 	strong, b {
 		color: #212931;
