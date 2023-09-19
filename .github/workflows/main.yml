@@ -1,0 +1,31 @@
+name: Github Action - Portfolio 
+
+on:
+  push:
+    branches: ["main"]
+
+env:
+  S3_BUCKET_NAME: chomanki.com
+  AWS_REGION : ap-northeast-2
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      
+      # Access Key와 Secret Access Key를 통해 권한을 확인합니다.
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }} # 등록한 Github Secret이 자동으로 불려옵니다.
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }} # 등록한 Github Secret이 자동으로 불려옵니다.
+          aws-region: $AWS_REGION
+
+      - name: Deploy S3
+        env:
+          AWS_ACCESS_KEY: ${{ secrects.AWS_ACCESS_KEY }}
+          AWS_SECRET_KEY: ${{ secrects.AWS_SECRET_KEY }}
+        run:
+          aws s3 sync --delete --region $AWS_REGION dist s3://$S3_BUCKET_NAME
