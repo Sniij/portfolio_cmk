@@ -7,6 +7,8 @@ on:
 env:
   S3_BUCKET_NAME: chomanki.com
   AWS_REGION : ap-northeast-2
+  AWS_ACCESS_KEY : ${{ secrets.AWS_ACCESS_KEY }}
+  AWS_SECRET_KEY : ${{ secrets.AWS_SECRET_KEY }}
   
 jobs:
   build:
@@ -19,13 +21,10 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }} # 등록한 Github Secret이 자동으로 불려옵니다.
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }} # 등록한 Github Secret이 자동으로 불려옵니다.
+          aws-access-key-id: $AWS_ACCESS_KEY
+          aws-secret-access-key: $AWS_SECRET_KEY
           aws-region: $AWS_REGION
 
       - name: Deploy S3
-        env:
-          AWS_ACCESS_KEY: ${{ secrects.AWS_ACCESS_KEY }}
-          AWS_SECRET_KEY: ${{ secrects.AWS_SECRET_KEY }}
         run:
           aws s3 sync --delete --region $AWS_REGION dist s3://$S3_BUCKET_NAME
