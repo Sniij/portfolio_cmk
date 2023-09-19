@@ -20,4 +20,5 @@ jobs:
 
     - name: Deploy S3
       run:
-        aws s3 sync --delete --region ap-northeast-2 dist/ s3://chomanki.com
+        aws s3 sync dist/ s3://chomanki.com --delete
+
