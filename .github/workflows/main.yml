@@ -20,4 +20,4 @@ jobs:
 
     - name: Deploy S3
       run:
-        aws s3 ls / s3://chomanki.com
+        aws s3 sync deploy/ s3://chomanki.com --delete
