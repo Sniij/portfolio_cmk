@@ -101,26 +101,82 @@
 				아래는 프로젝트 중 본인이 맡은 부분만 정리해 보았습니다.
 		</p>
 		<p style="font-family: 'Pretendard-Regular';">
-			- Git Branch strategy design <br/>
-			- Github convention configuration <br/>
-			- 커뮤니티 게시판 공동 구현 <br/>
-			- OAuth2(Google) 구현<br/>
+			- Git Branch strategy design: <br/>
+			아래와 같이 크게 FE-BE 통합을 위한 dev 브랜치와 배포를 위한 main 브랜치를 큰 틀로 두고 나누었습니다. <br/>
+			 <img
+			  src="images/dowajoyak_img/git_branch_strategy.png"
+			  alt=""
+			  /> <br/> <br/>
+
+			- Github convention configuration: <br/>
+			팀원들의 커밋 내용을 서로가 알아보기 쉽게 구성했습니다. <br/>
+			<img
+			src="images/dowajoyak_img/commit_convention.png"
+			alt=""
+			style="width: 44%"
+			/> <br/> <br/>
+
 			- Spring Security configuration (For login, signup) <br/>
-			- CORS configuration(security+S3)<br/>
-			- JWT 구현 <br/>
-			- OAuth2 + JWT 통합 <br/>
-			- Refresh token을 통한 access token 재발급 API 구현<br/>
-			- 외부 API 연동 후 커스텀하여 약 검색 API 구현 <br/>
-			- 사용자 정보를 검색 데이터와 매핑시켜 사용자에 따라 보여지는 검색 데이터 가공 <br/>
-			- JSON parsing service 구현<br/>
-			- S3 버킷에 이미지를 올리는 API 구현 <br/>
+			- CORS configuration(security+S3) <br/>
+			- OAuth2 + JWT 통합구현: <br/>
+			아래와 같은 흐름으로 구현하였습니다. <br/>
+			<img
+			src="images/dowajoyak_img/jwt_authentication.png"
+			alt=""
+			style="width: 44%"
+			/> <br/> <br/>
+			
 			- Client와 통신을 위한 기본 배포 환경 configuration(EC2+RDS+S3) <br/>
-			- 서버 환경 변수 리소스를 Parameter Store와 연동 configuration <br/>
 			- 배포 도메인 안정성을 위해 https to https deploy configuration(ACM, CloudFront, ELB, Route 53) <br/>
-			- Github Actions configuration(FE+BE, Code Deploy)<br/>
-			- AWS IAM 유저 생성 후 권한 설정하여 팀원들이 AWS 서비스에 접속할 수 있도록 configuration<br/>
-			- 커뮤니티 CRUD 기존 부분에서 token 검사를 통한 authorization logic으로 refactoring하여 보안성 높임 <br/>
-			- 검색 API 기존 부분에서 기능별로 class 분리시켜 서로의 의존성을 떨어뜨리는 refactoring을 통해 유지보수 편의성과 안정성을 높임 <br/>
+			- AWS IAM 유저 생성 후 권한 설정하여 팀원들이 AWS 서비스에 접속할 수 있도록 configuration: <br/>
+			AWS 서비스에 대한 관리 대부분을 제가 담당하여 팀원들이 개별적으로 AWS 서비스를 접속할 수 있도록 권한 설정 등을 한 후 계정을 나누어 관리하였습니다. <br/><br/>
+
+			- Github Actions configuration (FE+BE, Code Deploy): <br/>
+			FE 와 BE 각 팀별 branch에 PR을 날리면 빌드 스크립트를 이용하여 각각 빌드하게 하여 FE는 S3에 BE는 EC2에 배포되도록 구성하였습니다. <br/><br/>
+
+			- 서버 환경 변수 리소스를 Parameter Store와 연동 configuration: <br/>
+			Spring Cloud를 이용하여 Parameter Store를 연동시켜 서버 환경 변수들을 외부에 노출시키지 않고 관리하게끔 하였습니다. <br/><br/>
+
+			- 외부 API 연동 후 커스텀 하여 약 검색 API 구현: <br/>
+			&nbsp; - RestTemplate을 이용하여 공공 데이터 API와 통신을 수행하였고, 필요한 데이터만 받을 수 있도록 JSON parsing service 구현하여 활용하였습니다. <br/>
+			&nbsp; - 사용자 정보를 검색 데이터와 매핑시켜 사용자에 따라 보여지는 검색 데이터 가공하였습니다.<br/>
+			&nbsp; - 아래와 같은 흐름을 갖고 구현하였습니다.<br/>
+			<img
+			src="images/dowajoyak_img/api_medicine.png"
+			alt=""
+			style="width: 44%"
+			/> <br/> <br/>
+			
+			- 커뮤니티 게시판 API 구현: <br/>
+			아래와 같은 흐름을 갖고 구현하였습니다. 사용자에 대한 검증은 JWT를 통해하였습니다. <br/>
+			<img
+			src="images/dowajoyak_img/api_community.png"
+			alt=""
+			/> <br/> <br/>
+
+			
+			- 유저 관련 API 구현: <br/>
+			아래와 같은 흐름을 갖고 구현하였습니다. <br/>
+			<img
+			src="images/dowajoyak_img/api_user.png"
+			alt=""
+			/> <br/> <br/>
+
+			- S3 버킷에 이미지를 올리는 API 구현: <br/>
+			Spring Cloud의 S3 client를 이용하였고, 아래와 같은 흐름을 갖고 구현하였습니다. <br/>
+			<img
+			src="images/dowajoyak_img/api_s3.png"
+			alt=""
+			/> <br/> <br/>
+
+
+			- Refresh token을 통한 access token 재발급 API 구현: <br/>
+			FE 쪽에서 Token 검사를 지속적으로 하고, Access Token이 없다면 Refresh token을 보내 Access Token을 재발급 할 수 있도록 하였습니다. 아래와 같은 흐름을 갖고 구현하였습니다. <br/>
+			<img
+			src="images/dowajoyak_img/api_refresh_accessToken.png"
+			alt=""
+			/> <br/> <br/>
+
 		</p>
 		
 		<hr style="margin: 1rem 0px 1rem 0px;">
