@@ -1,10 +1,8 @@
 # Portfolio 용도로 제작한 웹입니다.
-
+##### 기본적인 템플릿은 https://html5up.net/massively 에서 가져왔습니다.
 ---
 
-##### 기본적인 템플릿은 https://html5up.net/massively 에서 가져왔습니다.
-
-####
+##### Deployment URL: https://www.chomanki.com
 
 - OVERVIEW, PORTFOLIO 스타일 컴포넌트 설정
 - KOREAN, ENGLISH 페이지 직접 제작
