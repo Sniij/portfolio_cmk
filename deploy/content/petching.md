@@ -10,18 +10,18 @@
 <h3>🔗 URLs</h3>
 <p>
 Team Github : <a href="https://github.com/Petching/Petching" target="_blank">https://github.com/Petching/Petching</a><br/>
-API Docs : <a href="https://docs.petching.net" target="_blank">https://docs.petching.net</a> <br/>
 </p>
 <hr style="margin: 1rem 0px 1rem 0px;">
 <h3>🛒 Skills</h3>
 <p style="font-family: 'Pretendard-Regular';">
 		- Back-end : Java, Spring Boot, Spring Data JPA, Spring Security, Spring MVC, Spring Cloud, Mockito, Rest Docs <br/>
 		- Database : MySQL, AWS RDS <br/>
-		- Deployment : AWS (EC2, ELB, S3, CloudFront, Route 53, CodeDeploy), GitHub Actions (gradle, ) <br/>
+		- Deployment : AWS (EC2, ELB, S3, CloudFront, Route 53, CodeDeploy), GitHub Actions (gradle) <br/>
 <hr style="margin: 1rem 0px 1rem 0px;">
 <h3>📄 Docs</h3>
 <p style="font-family: 'Pretendard-Regular';">
 	<a href="https://docs.google.com/spreadsheets/d/1Lj20gnDmrqOP_DdfgwARoLgrhtUpba-nQN7EjqF2n88/edit#gid=876641333"  target="_blank">- 펫칭 사용자 요구사항 정의서 </a>
+	 <a href="https://docs.petching.net" target="_blank">API 문서 </a>
 	<br/>
 </p>
 <hr style="margin: 1rem 0px 1rem 0px;">
