@@ -9,18 +9,20 @@
 <h3>🔗 URLs</h3>
 <p>
 Team Github : <a href="https://github.com/Petching/Petching" target="_blank">https://github.com/Petching/Petching</a><br/>
+Deployment : <a href="https://www.petching.net" target="_blank">https://www.petching.net</a><br/>
+
 </p>
 <hr style="margin: 1rem 0px 1rem 0px;">
 <h3>🛒 Skills</h3>
 <p style="font-family: 'Pretendard-Regular';">
-		- Back-end : Java, Spring Boot, Spring Data JPA, Spring Security, Spring MVC, Spring Cloud, Mockito, Rest Docs <br/>
+		- Back-end : Java, Spring Boot, MVC, JPA, Spring Security, Spring Cloud, Mockito, Rest Docs <br/>
 		- Database : MySQL, AWS RDS <br/>
 		- Deployment : AWS (EC2, ELB, S3, CloudFront, Route 53, CodeDeploy), GitHub Actions (gradle) <br/>
 <hr style="margin: 1rem 0px 1rem 0px;">
 <h3>📄 Docs</h3>
 <p style="font-family: 'Pretendard-Regular';">
-	<a href="https://docs.google.com/spreadsheets/d/1Lj20gnDmrqOP_DdfgwARoLgrhtUpba-nQN7EjqF2n88/edit#gid=876641333"  target="_blank">- 펫칭 사용자 요구사항 정의서 </a>
-	 <a href="https://docs.petching.net" target="_blank">API 문서 </a>
+	<a href="https://docs.google.com/spreadsheets/d/1Lj20gnDmrqOP_DdfgwARoLgrhtUpba-nQN7EjqF2n88/edit#gid=876641333"  target="_blank">- 펫칭 사용자 요구사항 정의서 </a> <br/>
+	 <a href="https://docs.petching.net" target="_blank">- API 문서 </a>
 	<br/>
 </p>
 <hr style="margin: 1rem 0px 1rem 0px;">
@@ -33,25 +35,36 @@ Team Github : <a href="https://github.com/Petching/Petching" target="_blank">htt
 		아래는 프로젝트 중 본인이 맡은 부분만 정리해 보았습니다.
 	</p>
 	<p style="font-family: 'Pretendard-Regular';">
-	- 커뮤니티 게시판, 댓글 API 구현 (CRUD 및 좋아요, 게시물 사진 끌어오기) <br/>
-	- 커뮤니티 CRUD 기존 부분에서 token 검사를 통한 authorization logic으로 refactoring하여 보안성 높임 <br/>
+	- 커뮤니티 게시판, 댓글 CRUD 구현  <br/>
+	- #######여기에 CRUD 플로우차트 만들어서 삽입 필요#########<br/>
+	- 커뮤니티 게시판 좋아요, 게시물 사진 랜덤으로 끌어오는 API, 유저가 작성한 게시글 조회할 수 있는 API<br/>
+	- #######여기에 플로우차트 만들어서 삽입 필요#########<br/>
+	- Refresh token을 통한 access token 재발급 API 구현<br/>
+	- #######여기에 플로우차트 만들어서 삽입 필요#########<br/>
+	- S3 버킷 파일 업로드 및 삭제 API 구현 <br/>
+	- #######여기에 플로우차트 만들어서 삽입 필요#########<br/>
+	- 사용자 문의하기 CRUD API 구현 <br/>
+	- 실시간 채팅을 위한 시스템 구성 및 API 구현 <br/>
+	- #######여기에 플로우차트 만들어서 삽입 필요#########<br/>
 	- Spring Security basic configuration <br/>
 	- CORS configuration(security+S3)<br/>
-	- Refresh token을 통한 access token 재발급 API 구현<br/>
-	- S3 버킷 파일 업로드 및 삭제 API 구현 <br/>
+	- #######여기에 뭘 위한 configuration인지 설명 필요#########<br/>
 	- Global exception handler 구현 <br/>
+	- #######여기에 왜 구현했는지 설명 필요#########<br/>
 	- Gradle configuration(Library version control, CI/CD, Rest docs..) <br/>
+	- #######여기에 뭘 configuration했는지 설명 필요#########<br/>
 	- Mockito를 기반으로 모든 API test code 작성 <br/>
+	- #######왜 Mockito인지 설명 필요#########<br/>
 	- Spring rest docs 를 이용한 API documentation 자동화를 위한 configuration <br/>
 	- Spring rest docs 를 통해 생긴 snippets을 이용하여 API 문서 작성 <br/>
+	- #######왜 rest docs인지 설명 필요 -우아한형제들 블로그 ref 괜춘#########<br/>
 	- Back-end cloud 개발 환경 configuration (AWS credential, paramter store, s3 client) <br/>
 	- Client와 통신을 위한 기본 배포 환경 configuration(EC2+RDS+S3) <br/>
 	- 배포 도메인 안정성을 위해 https to https deploy configuration(ACM, CloudFront, ELB, Route 53) <br/>
 	- CI/CD configuration(FE+BE, Github Actions, AWS Code Deploy)<br/>
 	- AWS IAM 을 통해 프로젝트 팀원 AWS 리소스 접근 관리 <br/>
 	- 프로젝트 동안 AWS 모든 서비스 관리 및 보수 <br/>
-	- 사용자 문의하기 CRUD API 구현 <br/>
-	- 실시간 채팅을 위한 시스템 구성 및 API 구현 <br/>
+
 	</p>
 
 </p>
@@ -67,21 +80,23 @@ Team Github : <a href="https://github.com/Petching/Petching" target="_blank">htt
 	- Mockito 의 편의성 <br/>
 	- Cloud service 의 편의성 및 위대함 <br/>
 </p>
+<hr style="margin: 1rem 0px 1rem 0px;">
 <h3>📑 Project READMD</h3>
 <p style="font-family: 'Pretendard-Regular';">
 
 #### 🐾 Petching 
 <br>
 
-<div align="center">
-    <img src="https://i.ibb.co/w74rDQb/2023-11-28-5-30-12-removebg-preview.png" alt="2023-11-28-5-30-12-removebg-preview" style="width:200px;" />
-</div>
+<div align = "center" class="image main" style="margin: 0">
+<a class="image main" style="margin: 0">
+    <img src="https://i.ibb.co/w74rDQb/2023-11-28-5-30-12-removebg-preview.png" alt="2023-11-28-5-30-12-removebg-preview" style="width: 10%;"
+    ></a>
 
 <br>
 
 
 <main align="center">
-    <h3 align="center">🐶 소중한 펫을 원하는 조건으로 맡기고 회원들에게 자랑해보세요! 🐱</h3> 
+    <h4 align="center">🐶 소중한 펫을 원하는 조건으로 맡기고 회원들에게 자랑해보세요! 🐱</h4> 
 </main>
 
 <br>
@@ -100,17 +115,21 @@ Team Github : <a href="https://github.com/Petching/Petching" target="_blank">htt
 
 <br>
 
-## 🚩 프로젝트 개요
+#### 🚩 프로젝트 개요
 
-* **프로젝트 명** : Petching
-* **진행 기간** : 23.07.24 ~ 23.11.30
-* **서비스 URL** : [🐶 Petching 🐱 바로 가기](https://petching.net/)
-* **노션 문서** : [Notion 바로 가기](https://www.notion.so/Team-PETmatCHING-30be5eeca58e45138f720cbaec70ea19)
+**프로젝트 명** : Petching
+
+**진행 기간** : 23.07.24 ~ 23.11.30
+
+**서비스 URL** : [🐶 Petching 🐱 바로 가기](https://petching.net/)
+
+**노션 문서** : [Notion 바로 가기](https://www.notion.so/Team-PETmatCHING-30be5eeca58e45138f720cbaec70ea19)
+
 
 <br>
 <br>
 
-## 👪 팀원 소개
+#### 👪 팀원 소개
 |                                                                      [곽지현](https://github.com/938938)                                                             |                                                                         [김성수](https://github.com/ggggggggithub)                                                          |                                                         [노호준](https://github.com/nowaveosu)                                                                              |                                                                            [염도경](https://github.com/yeomdogyeong)                                                        |                                                                       [김상래](https://github.com/ksr0818)                                                           |                                                                                        [김은정](https://github.com/196code-gray)                                          |                                                                         [조만기](https://github.com/sniij)                                                           |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | <a href="https://github.com/938938"> <img src="https://github.com/Petching/Petching/assets/88307264/380a2d13-8026-4e8a-ae35-f3e1b2884d4e" width=100px alt="_"/> </a> | <a href="https://github.com/ggggggggithub"> <img src="https://github.com/Petching/Petching/assets/88307264/b6aa0934-5b96-4d64-8c1c-7dfa5bb53186" width=100px alt="_"/> </a> |     <a href="https://github.com/938938"> <img src="https://github.com/Petching/Petching/assets/88307264/224a3a76-5a37-4d33-8a36-1a861cb11627" width=100px alt="_"/> </a>    | <a href="https://github.com/yeomdogyeong"> <img src="https://github.com/Petching/Petching/assets/88307264/09c77066-2849-4e56-9365-fbad0e3a049c" width=100px alt="_"/> </a> | <a href="https://github.com/938938"> <img src="https://github.com/Petching/Petching/assets/88307264/e9f67a61-4eaf-48bc-bf40-156b29ab16b1" width=100px alt="_"/> </a> | <a href="https://github.com/938938"> <img src="https://github.com/Petching/Petching/assets/88307264/ab1fac99-817d-49c0-88d6-863341021904" width=100px alt="_"/> </a>      | <a href="https://github.com/938938"> <img src="https://github.com/Petching/Petching/assets/88307264/15b76547-9099-42ee-a0f7-f0596a5667d8" width=100px alt="_"/> </a> |
@@ -120,16 +139,19 @@ Team Github : <a href="https://github.com/Petching/Petching" target="_blank">htt
 <br>
 <br>
 
-## 🚩 기술스택
+#### 🚩 기술스택
 
 <br>
+<div align = "center" class="image main" style="margin: 0">
+<a class="image main" style="margin: 0">
+    <img src="https://github.com/Petching/Petching/assets/82007474/6eb01093-ce9c-4b13-afb5-21ee97b8fe15" alt="Web_App_Reference_Architecture_2" style="width: 70%;"
+    ></a>
 
-![Web_App_Reference_Architecture_2](https://github.com/Petching/Petching/assets/82007474/6eb01093-ce9c-4b13-afb5-21ee97b8fe15)
 
 <br>
 <br>
 
-## 🖥 구현 이미지
+#### 🖥 구현 이미지
 
 <br>
 
@@ -148,7 +170,7 @@ Team Github : <a href="https://github.com/Petching/Petching" target="_blank">htt
 
 <br>
 
-## 🚩 커밋 컨벤션
+#### 🚩 커밋 컨벤션
 <br>
 
 | Message     | 설명        |

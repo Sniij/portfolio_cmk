@@ -113,8 +113,8 @@ Framework, Library
 -Spring Security : Spring 기반 어플리케이션에서 JWT 를 이용한 인증, 인가를 구현과 OAuth2.0을 사용한 경험이 있습니다.<br/>
 -Spring Rest Docs : Mockito 를 이용하여 Spring Rest Docs API 문서를 생성한 경험이 있습니다.<br/>
 -Spring Cloud : Spring cloud 를 통해 AWS S3 client 사용과 Parameter Store 를 사용하여 비밀 정보를 관리한 경험이 있습니다.<br/>
--RestTemplate : RestTemplate 를 이용하여 외부 API를 호출하여 사용한 경험이 있습니다.<br/><br/>
--Qurey DSL : Query dsl 을 통해 native query를 대신하여 복잡한 query를 가독성있고 편하게 사용하고 JPA 와 함꼐 사용하여 객체로 불러와 사용한 경험이 있습니다.<br/>
+-RestTemplate : RestTemplate 를 이용하여 외부 API를 호출하여 사용한 경험이 있습니다.<br/>
+-Qurey DSL : Query dsl 을 통해 native query를 대신하여 복잡한 query를 가독성있고 편하게 사용하고 JPA 와 함꼐 사용하여 객체로 불러와 사용한 경험이 있습니다.<br/><br/>
 <p
 style="
     font-family: 'Pretendard-Regular';
