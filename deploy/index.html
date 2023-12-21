@@ -31,15 +31,24 @@
 
     <!-- Wrapper -->
     <div id="wrapper" class="fade-in">
+
       <!--Background setting-->
       <div class="bg-overlay">
         <img style="margin: 1rem 0rem 0 1rem; width: 7rem;" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fwww.chomanki.com&count_bg=%23555555&title_bg=%23555555&title=VISITORS&edge_flat=false"/>
-        <div id="birds"></div>
+        <video
+        class="bg-video"
+        playsinline="playsinline"
+        autoplay="autoplay"
+        muted="muted"
+        loop="loop"
+      >
+        <source src="mp4/bg.mp4" type="video/mp4" />
+      </video>
       </div>
 
       <!-- Intro -->
       <div id="intro">
-        
+
         <h1>CMK's Web</h1>
         
         <p
@@ -63,6 +72,7 @@
             >
           </li>
         </ul>
+
       </div>
 
       <!-- Header -->

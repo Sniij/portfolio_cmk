@@ -79,7 +79,7 @@ input, select, textarea {
 	left: 0;
 	height: 100%;
 	width: 100%;
-	opacity: 0.8;
+	opacity: 0.4;
 	z-index: 1;
 }
 video.bg-video {
@@ -103,6 +103,17 @@ div #birds {
 	height: auto;
 	transform: translateX(-50%) translateY(-50%);
 	z-index: -1;
+}
+div #birds2 {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	transform: translateX(-50%) translateY(-50%);
+	z-index: 999;
 }
 /* modal */
 .modal{
@@ -3614,6 +3625,7 @@ div #birds {
 			#modal_dowajoyak h1{
 				font-size: 3rem;
 			}
+
 		}
 /* Header */
 
