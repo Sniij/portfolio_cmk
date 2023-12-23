@@ -34,22 +34,86 @@ Deployment : <a href="https://www.petching.net" target="_blank">https://www.petc
 		아래는 프로젝트 중 본인이 맡은 부분만 정리해 보았습니다.
 	</p>
 	<p style="font-family: 'Pretendard-Regular';">
-	- 커뮤니티 게시판, 댓글 CRUD 구현  <br/>
-	- #######여기에 CRUD 플로우차트 만들어서 삽입 필요#########<br/>
-	- 커뮤니티 게시판 좋아요, 게시물 사진 랜덤으로 끌어오는 API, 유저가 작성한 게시글 조회할 수 있는 API<br/>
-	- #######여기에 플로우차트 만들어서 삽입 필요#########<br/>
-	- Refresh token을 통한 access token 재발급 API 구현<br/>
-	- #######여기에 플로우차트 만들어서 삽입 필요#########<br/>
-	- S3 버킷 파일 업로드 및 삭제 API 구현 <br/>
-	- #######여기에 플로우차트 만들어서 삽입 필요#########<br/>
+	- 커뮤니티 게시판, 댓글 CRUD 구현<br/>
+	&nbsp;- 커뮤니티 게시판은 게시글을 작성할 수 있고, 댓글을 작성할 수 있습니다.<br/>
+	&nbsp;- 또한 글을 작성, 수정, 삭제할 때의 사용자 인증은 Bearer token 을 통해 검증합니다.<br/>
+	&nbsp;- 자세한 flow-chart 는 아래와 같습니다.
+	<br/>
+		<a href="images/petching_img/board_CRUD.png" target="_blank">
+	<img
+	src="images/petching_img/board_CRUD.png"
+	alt=""
+	style="width: 100%"
+	/></a> <br/> <br/>
+	- 커뮤니티 게시판 좋아요, 게시물 사진 랜덤으로 끌어오는 API <br/>
+	&nbsp;- 커뮤니티 게시판은 사용자들이 좋아요를 누를 수 있고, 좋아요 수는 모두에게 보여집니다. <br/>
+	&nbsp;- 커뮤니티 게시판의 글은 사진을 포함하여 작성할 수 있는데, 게시판의 속 사진을 랜덤으로 최대 4개를 가져올 수 있는 API 가 있습니다.
+	<br/>
+	<a href="images/petching_img/board_like_imgs.png" target="_blank">
+	<img
+	src="images/petching_img/board_like_imgs.png"
+	alt=""
+	style=" width: 50%"
+	/></a> <br/> <br/>
 	- 사용자 문의하기 CRUD API 구현 <br/>
+	&nbsp;- 고객센터의 기능을 할 수 있는 문의하기 페이지에서 사용되는 API 입니다. 
+	<br/>
+	<a href="images/petching_img/question_CRUD.png" target="_blank">
+	<img
+	src="images/petching_img/question_CRUD.png"
+	alt=""
+	style=" width: 100%"
+	/></a> <br/> <br/>
+	- S3 버킷 파일 업로드 및 삭제 API 구현<br/>
+	&nbsp;- 커뮤니티 게시판 또는 사용자 프로필에는 사진이 올라갈 수 있는데 이곳에 올라가는 사진은 이 API를 통해 S3 bucket에 저장됩니다.<br/>
+	&nbsp;- 해당하는 API는 front-end에서 필요할 때만 사용하기 때문에 사용자 인증 과정은 포함하지 않았습니다.
+	<br/>
+	<a href="images/petching_img/S3_api.png" target="_blank">
+	<img
+	src="images/petching_img/S3_api.png"
+	alt=""
+	style=" width: 50%"
+	/></a> <br/> <br/>
+	- Refresh token을 통한 access token 재발급 API 구현<br/>
+	&nbsp;- JWT는 token으로만 사용자 인증을 하기 때문에 탈취 등의 보안 약점이 있습니다. 그 허점을 보완하기 위해 access token 의 expire time 을 짧게 두고 refresh token 의 expire time 을 늘려 access token 을 refresh token 을 통해 재발급 하는 식으로 아키텍처를 구성했습니다.<br/>
+	&nbsp;- Refresh token은 사용자가 로그인 할 때 사용자에게 저장되며 로그아웃 할 때 삭제되는 아키텍처입니다.
+	<br/>
+	<a href="images/petching_img/jwt_refresh.png" target="_blank">
+	<img
+	src="images/petching_img/jwt_refresh.png"
+	alt=""
+	style=" width: 50%"
+	/></a> <br/> <br/>
 	- 실시간 채팅을 위한 시스템 구성 및 API 구현 <br/>
-	- #######여기에 플로우차트 만들어서 삽입 필요#########<br/>
+	&nbsp;- 실시간 채팅은 TCP 연결을 수행하고 끊지 않는 프로토콜을 사용하는 SMTP 을 사용하였습니다.<br/>
+	&nbsp;- WebSocket 연결은 채팅방을 들어가면 수행하게 되고 연결이 수행되고 난 후엔 메세지를 주고 받을 수 있습니다.<br/>
+	&nbsp;- 자세한 flow-chart 는 아래와 같습니다.  
+	<br/>
+	<a href="images/petching_img/chatting.png" target="_blank">
+	<img
+	src="images/petching_img/chatting.png"
+	alt=""
+	style=" width: 100%"
+	/></a> <br/> <br/>
+	- Global exception handler 구현<br/>
+	&nbsp;- HTTP Status 코드로 정상코드가 아닌 '오류코드'로 반환하였을 시 실제 '에러'가 발생하기에 이를 위해 중간에 GlobalExcpetion을 통해 Exception 발생 시에도 HTTP Status 코드로 '정상 코드'를 보내고 커스텀한 코드를 보냄으로써 실제 Client 내에서 이를 처리할 수 있게 돕기 위함입니다.
+	<br/>
+	<a href="images/petching_img/global_exception.png" target="_blank">
+	<img
+	src="images/petching_img/global_exception.png"
+	alt=""
+	style=" width: 50%"
+	/></a> <br/>
+	<a href="images/petching_img/global_exception2.png" target="_blank">
+	<img
+	src="images/petching_img/global_exception2.png"
+	alt=""
+	style=" width: 50%"
+	/></a>
+	 <br/>
 	- Spring Security basic configuration <br/>
 	- CORS configuration(security+S3)<br/>
 	- #######여기에 뭘 위한 configuration인지 설명 필요#########<br/>
-	- Global exception handler 구현 <br/>
-	- #######여기에 왜 구현했는지 설명 필요#########<br/>
 	- Gradle configuration(Library version control, CI/CD, Rest docs..) <br/>
 	- #######여기에 뭘 configuration했는지 설명 필요#########<br/>
 	- Mockito를 기반으로 모든 API test code 작성 <br/>
