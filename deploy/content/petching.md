@@ -20,9 +20,20 @@ Deployment : <a href="https://www.petching.net" target="_blank">https://www.petc
 <hr style="margin: 1rem 0px 1rem 0px;">
 <h3>📄 Docs</h3>
 <p style="font-family: 'Pretendard-Regular';">
-	<a href="https://docs.google.com/spreadsheets/d/1Lj20gnDmrqOP_DdfgwARoLgrhtUpba-nQN7EjqF2n88/edit#gid=876641333"  target="_blank">- 펫칭 사용자 요구사항 정의서 </a> <br/>
-	 <a href="https://docs.petching.net" target="_blank">- API 문서 </a>
+	<a href="https://docs.google.com/spreadsheets/d/1Lj20gnDmrqOP_DdfgwARoLgrhtUpba-nQN7EjqF2n88/edit#gid=876641333"  target="_blank">
+	- 펫칭 사용자 요구사항 정의서 
+	</a> <br/>
+	<a href="https://docs.petching.net" target="_blank">
+	- API 문서 
+	</a>
 	<br/>
+</p>
+<hr style="margin: 1rem 0px 1rem 0px;">
+<h3>⚙ Architecture</h3>
+<p style="font-family: 'Pretendard-Regular';">
+	<a href="images/petching_img/petching_architecture.png" target="_blank" class="image main" style="width: 70%;">
+				<img src="images/petching_img/petching_architecture.png" alt="petching_architecture.png"/>
+	</a>
 </p>
 <hr style="margin: 1rem 0px 1rem 0px;">
 <h3>📚 Summary</h3>
@@ -103,44 +114,36 @@ Deployment : <a href="https://www.petching.net" target="_blank">https://www.petc
 	src="images/petching_img/global_exception.png"
 	alt=""
 	style=" width: 50%"
-	/></a> <br/>
-	<a href="images/petching_img/global_exception2.png" target="_blank">
-	<img
-	src="images/petching_img/global_exception2.png"
-	alt=""
-	style=" width: 50%"
-	/></a>
-	 <br/>
-	- Spring Security basic configuration <br/>
-	- CORS configuration(security+S3)<br/>
-	- #######여기에 뭘 위한 configuration인지 설명 필요#########<br/>
-	- Gradle configuration(Library version control, CI/CD, Rest docs..) <br/>
-	- #######여기에 뭘 configuration했는지 설명 필요#########<br/>
-	- Mockito를 기반으로 모든 API test code 작성 <br/>
-	- #######왜 Mockito인지 설명 필요#########<br/>
-	- Spring rest docs 를 이용한 API documentation 자동화를 위한 configuration <br/>
-	- Spring rest docs 를 통해 생긴 snippets을 이용하여 API 문서 작성 <br/>
-	- #######왜 rest docs인지 설명 필요 -우아한형제들 블로그 ref 괜춘#########<br/>
-	- Back-end cloud 개발 환경 configuration (AWS credential, paramter store, s3 client) <br/>
+	/></a> 
+	<br/>
+	- Spring Security basic configuration, CORS configuration(security+S3) <br/>
+	&nbsp;- Https to Https 배포를 하기 위해 spring security 를 사용하여 client 의 주소를 허용하였고, CORS 설정을 내부적, S3 bucket에서 하여 베포를 완료하였습니다.<br/>
 	- Client와 통신을 위한 기본 배포 환경 configuration(EC2+RDS+S3) <br/>
 	- 배포 도메인 안정성을 위해 https to https deploy configuration(ACM, CloudFront, ELB, Route 53) <br/>
 	- CI/CD configuration(FE+BE, Github Actions, AWS Code Deploy)<br/>
+	- Back-end cloud 개발 환경 configuration (AWS credential, paramter store, s3 client) <br/>
 	- AWS IAM 을 통해 프로젝트 팀원 AWS 리소스 접근 관리 <br/>
 	- 프로젝트 동안 AWS 모든 서비스 관리 및 보수 <br/>
+	- Gradle control(Library version control, CI/CD, Rest docs) <br/>
+	&nbsp;- <br/>
+	- Mockito를 기반으로 모든 API test code 작성 <br/>
+	&nbsp;- <br/>
+	- Spring rest docs 를 이용한 API documentation 자동화를 위한 configuration <br/>
+	- Spring rest docs 를 통해 생긴 snippets을 이용하여 API 문서 작성 <br/>
+	&nbsp;-우아한형제들 블로그를 참고로 구성했습니다. <br/>
 	</p>
 
 </p>
 <hr style="margin: 1rem 0px 1rem 0px;">
 <h3>📑 Meaning</h3>
 <p style="font-family: 'Pretendard-Regular';">
-	아래의 주제들을 통해 작성할 예정입니다. <br/>
 	- CI/CD 중 AWS code deploy 에러, health check 에러<br/>
 	- Version control 의 중요성<br/>
 	- gradle을 다룰 줄 알아야 하는 필요성 <br/>
 	- 예외 처리 중 만난 문제들<br/>
 	- API 문서화의 중요성 <br/>
 	- Mockito 의 편의성 <br/>
-	- Cloud service 의 편의성 및 위대함 <br/>
+	- Cloud service 의 편의성 <br/>
 </p>
 <hr style="margin: 1rem 0px 1rem 0px;">
 

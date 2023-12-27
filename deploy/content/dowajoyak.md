@@ -28,6 +28,13 @@
 			<a href="https://docs.google.com/spreadsheets/d/1CUPt0x8gKh97rYzg2F48SPbh83m-5zFZFi5pKde51R8/edit#gid=0"  target="_blank">- 도와조약 API 명세서 </a>
 		</p>
 		<hr style="margin: 1rem 0px 1rem 0px;">
+		<h3>⚙ Architecture</h3>
+		<p style="font-family: 'Pretendard-Regular';">
+			<a href="images/dowajoyak_img/dowajoyak_architecture.png" target="_blank" class="image main" style="width: 70%;">
+						<img src="images/dowajoyak_img/dowajoyak_architecture.png" alt="dowajoyak_architecture.png"/>
+			</a>
+		</p>
+		<hr style="margin: 1rem 0px 1rem 0px;">
 		<h3>📚 Summary</h3>
 		<p style="font-family: 'Pretendard-Regular';">
 			간단한 프로젝트 소개를 드리면 해당 프로젝트는 의약품을 검색 했을 때 유저가 설문조사를 통하여 미리 저장해둔 알레르기나 기저질환에 따라 생길 수 있는 부작용들을 안내해줍니다. <br/>
@@ -56,9 +63,9 @@
 			- OAuth2 + JWT 통합구현: <br/>
 			아래와 같은 흐름으로 구현하였습니다. <br/>
 			<img
-			src="images/dowajoyak_img/jwt_authentication.png"
+			src="images/dowajoyak_img/Oauth2_jwt_archi.png"
 			alt=""
-			style="width: 44%"
+			style="width: 65%"
 			/> <br/> <br/>
 			- Client와 통신을 위한 기본 배포 환경 configuration(EC2+RDS+S3) <br/>
 			- 배포 도메인 안정성을 위해 https to https deploy configuration(ACM, CloudFront, ELB, Route 53) <br/>
@@ -233,7 +240,7 @@
 - Token refresh 관련 로직을 수행하는 Service 추가 후 적용
   - 기존에 controller 에서 비지니스 로직이 수행되던 문제가 있었음.
   - : 리팩토링 하며 만든 사용자 인증 메서드 등을 재활용하여 사용하는 로직으로 재정의 후 service 클래스에 정의하여 controller 클래스에 DI 시켜 MVC 패턴의 개념을 적용하였음. 
-  
+
 #### Search API
 - 비지니스 로직의 분리
   - Controller 에서 필요하지 않은 비지니스 로직이 포함되는 문제가 있었음.
