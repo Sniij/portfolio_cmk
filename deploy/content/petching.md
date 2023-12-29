@@ -116,25 +116,64 @@ Deployment : <a href="https://www.petching.net" target="_blank">https://www.petc
 	style=" width: 50%"
 	/></a> 
 	<br/>
-	- Spring Security basic configuration, CORS configuration(security+S3) <br/>
-	&nbsp;- Https to Https 배포를 하기 위해 spring security 를 사용하여 client 의 주소를 허용하였고, CORS 설정을 내부적, S3 bucket에서 하여 베포를 완료하였습니다.<br/>
-	- Client와 통신을 위한 기본 배포 환경 configuration(EC2+RDS+S3) <br/>
-	- 배포 도메인 안정성을 위해 https to https deploy configuration(ACM, CloudFront, ELB, Route 53) <br/>
-	- CI/CD configuration(FE+BE, Github Actions, AWS Code Deploy)<br/>
-	- Back-end cloud 개발 환경 configuration (AWS credential, paramter store, s3 client) <br/>
-	- AWS IAM 을 통해 프로젝트 팀원 AWS 리소스 접근 관리 <br/>
+	- Spring Security basic configuration for CORS <br/>
+	&nbsp;- 아래와 같은 흐름을 주고 Front-end 개발 환경을 위해 내부적인 cors 설정을 하였습니다.<br/>
+	<a href="images/petching_img/springboot-cors.png" target="_blank">
+	<img
+	src="images/petching_img/springboot-cors.png"
+	alt=""
+	style=" width: 50%"
+	/></a> 
+	<br/>
+	- Https to Https Deployment <br/>
+	&nbsp;- AWS 를 활용하여 아래와 같은 아키텍쳐로 배포를 하였습니다.<br/>
+	<a href="images/petching_img/HttpsToHttps.png" target="_blank">
+	<img
+	src="images/petching_img/HttpsToHttps.png"
+	alt=""
+	style=" width: 50%"
+	/></a> 
+	<br/>
+	- Back-end cloud 개발 환경 configuration (paramter store, s3 client) <br/>
+	&nbsp;- Spring cloud 를 사용하여 s3 client, parameter store 등을 사용하려했기 때문에 구성하였습니다.<br/>
+	&nbsp;- 아키텍쳐는 아래와 같으며 S3 client 예시를 아래와 같은 흐름으로 구성했습니다.<br/>
+	<a href="images/petching_img/spring-cloud.png" target="_blank">
+	<img
+	src="images/petching_img/spring-cloud.png"
+	alt=""
+	style=" width: 50%"
+	/></a> 
+	<br/>
+	<a href="images/petching_img/springboot-s3.png" target="_blank">
+	<img
+	src="images/petching_img/springboot-s3.png"
+	alt=""
+	style=" width: 50%"
+	/></a> 
+	<br/>
+	- CI/CD configuration(BE+FE, Github Actions, AWS Code Deploy)<br/>
+	&nbsp;- 아래와 같은 아키텍처로 구성하여 CI/CD 를 설정했습니다.<br/>
+	<a href="images/petching_img/ci-architecture.png" target="_blank">
+	<img
+	src="images/petching_img/ci-architecture.png"
+	alt=""
+	style=" width: 50%"
+	/></a> 
+	<br/>
 	- 프로젝트 동안 AWS 모든 서비스 관리 및 보수 <br/>
+	&nbsp;- CI/CD, origin services(EC2, RDS, S3 등), 각종 이슈대처, 팀원들의 IAM 계정 관리 등을 담당하였습니다. <br/>
 	- Gradle control(Library version control, CI/CD, Rest docs) <br/>
-	&nbsp;- <br/>
+	&nbsp;- Spring cloud 버전은 직접 명시해줘야 하고, Rest docs 자동화를 위한 설정을 gradle에서 직접 해주어야 하기 때문에 원하는 기능을 위해 직접 설정하였습니다. <br/>
 	- Mockito를 기반으로 모든 API test code 작성 <br/>
-	&nbsp;- <br/>
-	- Spring rest docs 를 이용한 API documentation 자동화를 위한 configuration <br/>
-	- Spring rest docs 를 통해 생긴 snippets을 이용하여 API 문서 작성 <br/>
-	&nbsp;-우아한형제들 블로그를 참고로 구성했습니다. <br/>
+	&nbsp;- 백엔드 개발은 DDD(Domain Driven Development)로 하였지만 Spring Rest Docs 를 사용하여 API 문서를 작성하기로 하였습니다. 그로인해 테스트 코드를 간단하게 작성할 수 있는 방법인 Spring Mockito + MockMvc 를 사용하여 모든 API 의 테스트 코드를 작성하였습니다.<br/>
+	- Spring rest docs 적용 <br/>
+	&nbsp;- API 문서 자동화를 위해 Swagger와 Rest Docs 를 고민하였는데 이미 개발된 코드들에 전부 어노테이션을 붙여 swagger에 동기화 시키는 것은 부담이 되었고, 결국 API 문서는 front-end 와의 소통창구를 위해 만드는 목적이었기 때문에 깔끔 명료한 rest docs 로 API 문서 자동화하기로 하였습니다. <br/>
 	</p>
 
 </p>
 <hr style="margin: 1rem 0px 1rem 0px;">
+
+<!--
 <h3>📑 Meaning</h3>
 <p style="font-family: 'Pretendard-Regular';">
 	- CI/CD 중 AWS code deploy 에러, health check 에러<br/>
@@ -146,6 +185,7 @@ Deployment : <a href="https://www.petching.net" target="_blank">https://www.petc
 	- Cloud service 의 편의성 <br/>
 </p>
 <hr style="margin: 1rem 0px 1rem 0px;">
+-->
 
 <h3>👨‍👨‍👦‍👦 Members</h3>
 	<p style="font-family: 'Pretendard-Regular'; padding-left: 10px;">
