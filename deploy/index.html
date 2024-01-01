@@ -34,6 +34,7 @@
 
       <!--Background setting-->
       <div class="bg-overlay">
+        <p id="sessions"></p>
         <img style="margin: 1rem 0rem 0 1rem; width: 7rem;" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fwww.chomanki.com&count_bg=%23555555&title_bg=%23555555&title=VISITORS&edge_flat=false"/>
         <video
         class="bg-video"
@@ -189,7 +190,14 @@
         $("p").toggle();
       });
     </script>
-
+  <script>
+    fetch('https://x23gg8mo9k.execute-api.ap-northeast-2.amazonaws.com/portfolio-ga4-1/')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('sessions').innerText = `Sessions: ${data.sessions}`;
+      })
+      .catch(error => console.error('Error:', error));
+    </script>
 </body>
   </body>
 </html>
