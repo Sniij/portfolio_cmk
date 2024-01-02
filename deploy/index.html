@@ -28,14 +28,18 @@
     
   </head>
   <body class="is-preload">
+    <div class="visitor">Visitors:
+      <p  id="todayVisitors"></p> /
+      <p  id="totalVisitors"></p>
 
+
+    </div>
     <!-- Wrapper -->
     <div id="wrapper" class="fade-in">
 
       <!--Background setting-->
       <div class="bg-overlay">
-        <p id="sessions"></p>
-        <img style="margin: 1rem 0rem 0 1rem; width: 7rem;" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fwww.chomanki.com&count_bg=%23555555&title_bg=%23555555&title=VISITORS&edge_flat=false"/>
+
         <video
         class="bg-video"
         playsinline="playsinline"
@@ -178,6 +182,7 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/contentMD.js"></script>
+    <script src="assets/js/visitors.js"></script>
     <script src="assets/js/gaapi.js"></script>
     <script src="assets/js/vanta.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -189,14 +194,6 @@
       check.click(function(){
         $("p").toggle();
       });
-    </script>
-  <script>
-    fetch('https://x23gg8mo9k.execute-api.ap-northeast-2.amazonaws.com/portfolio-ga4-1/')
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById('sessions').innerText = `Sessions: ${data.sessions}`;
-      })
-      .catch(error => console.error('Error:', error));
     </script>
 </body>
   </body>

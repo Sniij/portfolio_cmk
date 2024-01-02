@@ -3369,11 +3369,41 @@ div #birds2 {
 
 		}
 
+/* Visitor */
+.visitor {
+	color: #ffffff;
+	padding: 1rem 0rem 0rem 2rem ;
+	position: relative;
+	text-align: left;
+	z-index: 1;
+	display:inline-block;
+	overflow:hiddlen;
+	white-space:nowrap;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-size: 1rem;
+	font-weight: 900;
+	letter-spacing: 0.075em;
+	line-height: 1.5;
+	text-align: left;
+	text-transform: uppercase;
+}
+.visitor p {
+	color: #ffffff;
+	position: relative;
+	text-align: left;
+	z-index: 1;
+	display:inline-block;
+	overflow:hiddlen;
+	white-space:nowrap;
+}
+
+
+
 /* Intro */
 
 	#intro {
 		color: #ffffff;
-		padding: 8rem 4rem 7rem 4rem ;
+		padding: 5rem 4rem 7rem 4rem ;
 		-moz-align-items: center;
 		-webkit-align-items: center;
 		-ms-align-items: center;
