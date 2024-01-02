@@ -23,9 +23,25 @@
         <br/>
         서버단의 구현없이 개발하였지만, CSS 생각보다 신경써야 할 부분이 많아서 쉽지는 않았던 것 같습니다.
         <br/>
-        개발 후 웹 페이지 배포의 번거로움을 느껴 Github actions를 통해 자동 배포를 구현하였습니다.
+        - 개발 후 웹 페이지 배포의 번거로움을 느껴 Github actions를 통해 자동 배포를 구현하였습니다. 아키텍쳐는 아래와 같습니다.  
         <br/>
-        개발 후 기존 HTML에 직접 컨텐츠를 적는 불편함이 생겨 마크다운 파일로 작성 후 읽어올 수 있게끔 Ajax 를 사용하여 md -> html 로 변환 가능하게 했습니다.
+        <a href="images/portfolio_img/cdworkflow.png" target="_blank">
+        <img
+        src="images/portfolio_img/cdworkflow.png"
+        alt=""
+        style="width: 60%"
+        /></a>
+        <br/>
+        - 개발 후 기존 HTML에 직접 컨텐츠를 적는 불편함이 생겨 마크다운 파일로 작성 후 읽어올 수 있게끔 Ajax 를 사용하여 md -> html 로 변환 가능하게 했습니다.
+        - 방문자 수 컴포넌트 추가를 위해 Google Analytics 4 API 를 사용해 받아왔고, 이 후 웹에 공급할 수 있도록 AWS ( api gateway + lambda ) 를 사용하여 serverless 로 구현하였습니다. 이에대한 아키텍쳐는 아래와 같습니다.
+        <br/>
+        <a href="images/portfolio_img/ga4-aws-serverless.png" target="_blank">
+        <img
+        src="images/portfolio_img/ga4-aws-serverless.png"
+        alt=""
+        style="width: 80%"
+        /></a>
+        <br/>
     </p>
     <hr style="margin: 1rem 0px 1rem 0px;">
     <h3>📑 Meaning</h3>
@@ -36,7 +52,6 @@
         CSS를 설정하면서 각 컴포넌트 마다 직접 명시를 해줘야 하는 작업이 정말 헷갈리고 신경쓰였지만 그래도 완성되어 가는 모습을 보며 뿌듯함을 느끼게 되었고, Front-end 분들의 고충도 조금이나마 더 알게 되었습니다. <br/>
         배포는 AWS의 S3 버킷 정적 웹사이트 호스팅을 이용하였고, 배포 도메인을 구매하여 ACM에서 SSL 인증서를 받아 CloudFront를 통해 https로 배포 하였습니다.<br/>
         이후 Route 53을 통해 S3 엔드포인트를 제가 구매한 도메인으로 호스팅하였습니다.<br/>
-        마지막으로 해당 프로젝트에 대한 생각을 덧붙이자면 추후 작성자 권한의 로그인 기능을 넣어 블로그 형태의 글을 작성하여 넣을 수 있는 웹으로 리팩토링 하면 어떨까 하는 생각은 갖고 있습니다.
     </p>
 
 </div>
