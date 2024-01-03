@@ -4,7 +4,7 @@
 
 #### Architecture
 
-<img src="images/portfolio_img/cdworkflow.png" alt="cdworkflow"></img>
+<img src="deploy/images/portfolio_img/cdworkflow.png" alt="cdworkflow"></img>
 
 ---
 ##### Deployment URL: https://www.chomanki.com
