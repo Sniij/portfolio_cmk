@@ -38,7 +38,7 @@ $(document).ready(function() {
           const bootstrapModal = new bootstrap.Modal(modalPetching);
           bootstrapModal.show();
         }   else if(window.location.hash === "#modal_parking"){
-            const modalPetching = document.querySelector("#modal_parking");
+            const modalParking = document.querySelector("#modal_parking");
             const bootstrapModal = new bootstrap.Modal(modalParking);
             bootstrapModal.show();
           }

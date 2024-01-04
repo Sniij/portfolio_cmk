@@ -22,7 +22,7 @@ fetch(url)
             }
         });
 
-        // HTML 요소에 값을 출력
+        // HTML 요소에 값 출력
         document.getElementById('totalVisitors').innerText = totalVisitors;
         document.getElementById('todayVisitors').innerText = todayVisitors;
     })
