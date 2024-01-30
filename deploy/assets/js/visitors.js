@@ -1,4 +1,4 @@
-let url = 'https://portfolio.chomanki.com/visitors/portfolio-ga4';
+let url = 'https://server.portfolio.chomanki.com/visitors/portfolio-ga4';
 
 let today = new Date();
 let dd = String(today.getDate()).padStart(2, '0');
