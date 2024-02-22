@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-    var markdownFiles = ["content/introduce.md","content/dowajoyak.md", "content/portfolio.md", "content/petching.md", "content/eco.md"];
-    var targetElements = ["#mark-introduce","#modal-dowajoyak", "#modal-portfolio", "#modal-petching", "#modal-parking"];
+    var markdownFiles = ["content/introduce.md","content/dowajoyak.md", "content/portfolio.md", "content/petching.md", "content/eco.md", "content/blog.md"];
+    var targetElements = ["#mark-introduce","#modal-dowajoyak", "#modal-portfolio", "#modal-petching", "#modal-parking", "#modal-blog"];
 
     for (var i = 0; i < markdownFiles.length; i++) {
         $.ajax({
@@ -41,7 +41,13 @@ $(document).ready(function() {
             const modalParking = document.querySelector("#modal_parking");
             const bootstrapModal = new bootstrap.Modal(modalParking);
             bootstrapModal.show();
-          }
+        }
+          else if(window.location.hash === "#modal_blog"){
+            const modalBlog = document.querySelector("#modal_blog");
+            const bootstrapModal = new bootstrap.Modal(modalBlog);
+            bootstrapModal.show();
+        }
+
       });
       document.getElementById("modalPortfolio").addEventListener("click", function(){
           window.location.hash = "#modal_portfolio";
@@ -55,6 +61,11 @@ $(document).ready(function() {
       document.getElementById("modalParking").addEventListener("click", function(){
         window.location.hash = "#modal_parking";
     });
+    document.getElementById("modalBlog").addEventListener("click", function(){
+        window.location.hash = "#modal_blog";
+    });
+
+
       document.getElementById("modalDowajoyakClose").addEventListener("click", function () {
           history.replaceState(null,null,'generic.html');
           bootstrapModal.showdown();
@@ -68,6 +79,10 @@ $(document).ready(function() {
           bootstrapModal.showdown();
       });
       document.getElementById("modalParkingClose").addEventListener("click", function () {
+        history.replaceState(null,null,'generic.html');
+        bootstrapModal.showdown();
+    });
+    document.getElementById("modalBlogClose").addEventListener("click", function () {
         history.replaceState(null,null,'generic.html');
         bootstrapModal.showdown();
     });
