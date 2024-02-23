@@ -16,7 +16,7 @@ Blog
     <hr style="margin: 1rem 0px 1rem 0px;">
     <h3>🛒 Skills</h3>
     <p style="font-family: 'Pretendard-Regular';">
-        - Back-end : Java, Spring boot, Spring Security(OAuth2+JWT), MongoDB, AWS(Lambda, API Gateway, Route 53)   <br/>
+        - Back-end : Java 17, Spring boot 3, Spring Security(OAuth2+JWT), MongoDB, AWS(Lambda, API Gateway)   <br/>
         - Front-end : TypeScript, Next JS 13, tailwind css, content layer, Redis, AWS(Route 53), Vercel(Deploy)  <br/>
     </p>
     <hr style="margin: 1rem 0px 1rem 0px;">
@@ -26,8 +26,27 @@ Blog
     </p>
     <hr style="margin: 1rem 0px 1rem 0px;">
     <h3>⛓ Architecture</h3>
+    <p>
+        - Back:  <br/>
+            <img
+            src="images/blog_img/architecture-back.png"
+            alt="architecture-back"
+            style="width:100%"
+            /> <br/> <br/>
+    </p>
+        <hr style="margin: 1rem 0px 1rem 0px;">
+    <p>
+        - Front:  <br/>
+            <img
+            src="images/blog_img/architecture-front.png"
+            alt="architecture-front"
+            style="width:100%"
+            /> <br/> <br/>
+    </p>
     <hr style="margin: 1rem 0px 1rem 0px;">
     <h3>📑 Meaning</h3>
+    <p style="font-family: 'Pretendard-Regular';">
+    </p>
 
 </div>
 
