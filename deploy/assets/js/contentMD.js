@@ -24,31 +24,30 @@ $(document).ready(function() {
 
 
 $(document).ready(function() {
-    document.addEventListener("DOMContentLoaded", function() {
+
         if (window.location.hash === "#modal_portfolio") {
-          const modalPortfolio = document.querySelector("#modal_portfolio");
+          const modalPortfolio = document.getElementById("modal_portfolio");
           const bootstrapModal = new bootstrap.Modal(modalPortfolio);
           bootstrapModal.show();
         } else if(window.location.hash === "#modal_dowajoyak"){
-          const modalDowajoyak = document.querySelector("#modal_dowajoyak");
+          const modalDowajoyak = document.getElementById("modal_dowajoyak");
           const bootstrapModal = new bootstrap.Modal(modalDowajoyak);
           bootstrapModal.show();
         }	else if(window.location.hash === "#modal_petching"){
-          const modalPetching = document.querySelector("#modal_petching");
+          const modalPetching = document.getElementById("modal_petching");
           const bootstrapModal = new bootstrap.Modal(modalPetching);
           bootstrapModal.show();
         }   else if(window.location.hash === "#modal_parking"){
-            const modalParking = document.querySelector("#modal_parking");
+            const modalParking = document.getElementById("modal_parking");
             const bootstrapModal = new bootstrap.Modal(modalParking);
             bootstrapModal.show();
         }
           else if(window.location.hash === "#modal_blog"){
-            const modalBlog = document.querySelector("#modal_blog");
+            const modalBlog = document.getElementById("modal_blog");
             const bootstrapModal = new bootstrap.Modal(modalBlog);
             bootstrapModal.show();
         }
 
-      });
       document.getElementById("modalPortfolio").addEventListener("click", function(){
           window.location.hash = "#modal_portfolio";
       });
@@ -68,22 +67,17 @@ $(document).ready(function() {
 
       document.getElementById("modalDowajoyakClose").addEventListener("click", function () {
           history.replaceState(null,null,'generic.html');
-          bootstrapModal.showdown();
       });
       document.getElementById("modalPortfolioClose").addEventListener("click", function () {
           history.replaceState(null,null,'generic.html');
-          bootstrapModal.showdown();
       });
       document.getElementById("modalPetchingClose").addEventListener("click", function () {
           history.replaceState(null,null,'generic.html');
-          bootstrapModal.showdown();
       });
       document.getElementById("modalParkingClose").addEventListener("click", function () {
         history.replaceState(null,null,'generic.html');
-        bootstrapModal.showdown();
     });
     document.getElementById("modalBlogClose").addEventListener("click", function () {
         history.replaceState(null,null,'generic.html');
-        bootstrapModal.showdown();
     });
 });
