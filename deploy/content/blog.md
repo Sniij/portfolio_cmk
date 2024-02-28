@@ -10,7 +10,7 @@ Blog
     <h3>🔗 URLs</h3>
     <p>
         Deploy : <a href="https://blog.chomanki.com" target="_blank">https://blog.chomanki.com</a><br/>
-        Github-Back(Not yet public) : <a href="https://github.com/Sniij/chomanki.com-api" target="_blank">https://github.com/Sniij/chomanki.com-api</a><br/>
+        Github-Back : <a href="https://github.com/Sniij/chomanki.com-api" target="_blank">https://github.com/Sniij/chomanki.com-api</a><br/>
         Github-Front : <a href="https://github.com/Sniij/chomanki.com" target="_blank">https://github.com/Sniij/chomanki.com</a><br/>
     </p>
     <hr style="margin: 1rem 0px 1rem 0px;">
