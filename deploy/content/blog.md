@@ -1,6 +1,6 @@
 <h1 class="modal-title fs-5" id="exampleModalLabel" style="text-align: left; font-size: 2rem; padding: 1rem 0 0 1rem" >
 Blog
-<a href="https://github.com/Sniij/chomanki-api" target="_blank" class="icon brands alt fa-github" ><span class="label">GitHub-Back</span></a>
+<a href="https://github.com/Sniij/chomanki.com-api" target="_blank" class="icon brands alt fa-github" ><span class="label">GitHub-Back</span></a>
 <a href="https://github.com/Sniij/chomanki.com" target="_blank" class="icon brands alt fa-github" ><span class="label">GitHub-Front</span></a>
 
 </h1>
@@ -10,7 +10,7 @@ Blog
     <h3>🔗 URLs</h3>
     <p>
         Deploy : <a href="https://blog.chomanki.com" target="_blank">https://blog.chomanki.com</a><br/>
-        Github-Back(Not yet public) : <a href="https://github.com/Sniij/chomanki-api" target="_blank">https://github.com/Sniij/chomanki-api</a><br/>
+        Github-Back(Not yet public) : <a href="https://github.com/Sniij/chomanki.com-api" target="_blank">https://github.com/Sniij/chomanki.com-api</a><br/>
         Github-Front : <a href="https://github.com/Sniij/chomanki.com" target="_blank">https://github.com/Sniij/chomanki.com</a><br/>
     </p>
     <hr style="margin: 1rem 0px 1rem 0px;">
