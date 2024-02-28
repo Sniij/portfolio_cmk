@@ -163,10 +163,31 @@ Blog
             이러한 배경을 볼 때 SSR이 필요하여 CSR과 SSR을 혼합해서 사용할 수 있는 NextJS를 선택하게 됐습니다. <br/>
             NextJS를 선택한 후 마크다운 파일을 동적 렌더링을 시켜줄 수 있는 content layer 라이브러리를 알게 되어 조금 더 간편하게 그리고 레퍼런스가 많은 content layer 라이브러리를 사용하기로 하였습니다. <br/></br>
         </p>
-
+        <p style="font-family: 'Pretendard-Regular';">
+            <a style="font-weight: bold; border-bottom: none;">
+            이제 사용자에 관한 아키텍쳐에 대하여 설명드리겠습니다.</br></br>
+            </a>
+            <a style="font-weight: bold; border-bottom: none;">
+            1. 왜 토큰 기반의 인증 서버인가? </br>
+            </a>
+            사실 세션 기반의 검증 과정이 개발해야 하는 양 자체는 적지만 lambda 기반의 서버리스 아키텍쳐는 세션 관리가 불안정 하기 때문에 토큰 방식의 인증 로직을 구성했습니다. <br/>
+            토큰은 JWT를 사용하였으며, <br/>
+            소셜 로그인 성공시 access token과 refresh token이 백엔드 서버에서 발급되어 리다이렉트 할 곳에 파라미터 형태로 던져줍니다. <br/>
+            프론트엔트에선 헤더 또는 내비 바에서 파마미터 값을 읽어 쿠키에 저장시킵니다.  <br/>
+            저장된 access token은 Authorization 필드에 담아 서버로 보내 <br/>
+            백엔드에서 구현되어 있는 spring security 기반의 인증 체인에서 검증 과정을 거치게 됩니다.  <br/>
+            사용자 검증이 필요한 api는 모두 token 검증 과정을 거칩니다. <br/>
+            <br/></br>
+        </p>
     </p>
-</div>
-
-<hr style="margin: 0rem 0px 5rem 0px;">
-    
+    <hr style="margin: 1rem 0px 1rem 0px;">
+    <h3>👨‍👨‍👦‍👦 Member</h3>
+		<p style="font-family: 'Pretendard-Regular'; padding-left: 10px;">
+			A. Front-end : <br />
+			<a href="https://github.com/Sniij" target="_blank" >조만기</a> <br />
+			B. Back-end : <br />
+			<a href="https://github.com/Sniij" target="_blank" >조만기</a><br />
+		</p>
+        <hr style="margin: 1rem 0px 5rem 0px;">
+    </div>
 </div>
