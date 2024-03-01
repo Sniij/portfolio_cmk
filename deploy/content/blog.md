@@ -130,7 +130,7 @@ Blog
             이렇게 현재의 domain에선 NoSQL DB를 사용하기에 적합한 모델이 되어 MongoDB Atlas 를 사용하여   <br/>
             제가 예상되는 범위내에선 무료로 사용할 수 있게 구성하였습니다.   <br/>
             다만 조회수에서는 항상 수정이 필요했기 때문에 여러가지 방법과 최대한 비용이 적게 들어가는 DB를 몰색해 보았는데,   <br/>
-            제가 운용하는 기준에서는 Upstash의 Redis 정도만 사용해도 충분할 것 같다는 판단이 들어서 Upstash의 Redis를 선택하였습니다. <br/>
+            제가 운용하는 기준에서는 Upstash의 Redis 정도만 사용해도 충분할 것 같다는 판단이 들어서 Upstash의 Redis를 선택하였습ssm니다. <br/>
             다만 조회수 domain을 또 만들어 api 를 생성하는 것보다 <br/>
             클라이언트에서 redis 와 연결시켜 조회수만 올릴 수 있는 api를 만들어 운용하기로 아키텍쳐를 구성하였습니다. <br/>
         </p>
@@ -165,11 +165,16 @@ Blog
         </p>
         <p style="font-family: 'Pretendard-Regular';">
             <a style="font-weight: bold; border-bottom: none;">
-            이제 사용자에 관한 아키텍쳐에 대하여 설명드리겠습니다.</br></br>
+            이제 security 관한 아키텍쳐에 대하여 설명드리겠습니다.</br>
             </a>
             <a style="font-weight: bold; border-bottom: none;">
             1. 왜 토큰 기반의 인증 서버인가? </br>
             </a>
+                        <img
+            src="images/blog_img/authorization_logic.png"
+            alt="authorization_logic"
+            style="width:50%"
+            /> <br/>
             사실 세션 기반의 검증 과정이 개발해야 하는 양 자체는 적지만 lambda 기반의 서버리스 아키텍쳐는 세션 관리가 불안정 하기 때문에 토큰 방식의 인증 로직을 구성했습니다. <br/>
             토큰은 JWT를 사용하였으며, <br/>
             소셜 로그인 성공시 access token과 refresh token이 백엔드 서버에서 발급되어 리다이렉트 할 곳에 파라미터 형태로 던져줍니다. <br/>
@@ -177,7 +182,8 @@ Blog
             저장된 access token은 Authorization 필드에 담아 서버로 보내 <br/>
             백엔드에서 구현되어 있는 spring security 기반의 인증 체인에서 검증 과정을 거치게 됩니다.  <br/>
             사용자 검증이 필요한 api는 모두 token 검증 과정을 거칩니다. <br/>
-            <br/></br>
+            또한 Access token의 expexpiration time은 1시간으로 설정하여 클라이언트에서 access token 없이 refresh token만 존재함을 감지하면<br/>
+            백엔드의 access token 재발급 api로 refresh token을 보내 검증 후 access token을 재발급하여 보내주고 다시 쿠키에 저장시키게끔 하였습니다. <br/>
         </p>
     </p>
     <hr style="margin: 1rem 0px 1rem 0px;">
