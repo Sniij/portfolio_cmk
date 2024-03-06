@@ -162,15 +162,22 @@ Blog
             이제 메인이 되는 프레임워크를 선택해야 하는데 백엔드 아키텍쳐를 짤 때 블로그가 동적으로 렌더링 되어야 하며, Redis와 직접 커넥트하여 조회수를 올리게끔 짰습니다. <br/>
             이러한 배경을 볼 때 SSR이 필요하여 CSR과 SSR을 혼합해서 사용할 수 있는 NextJS를 선택하게 됐습니다. <br/>
             NextJS를 선택한 후 마크다운 파일을 동적 렌더링을 시켜줄 수 있는 content layer 라이브러리를 알게 되어 조금 더 간편하게 그리고 레퍼런스가 많은 content layer 라이브러리를 사용하기로 하였습니다. <br/></br>
+            <a style="font-weight: bold; border-bottom: none;">
+            4. "왜 풀스택으로 개발했는가?"</br>
+            </a>
+            사실 이 부분이 프로젝트 중 지인들이 가장 의아했던 부분입니다.</br>
+            저는 백엔드 엔지니어로서 역량을 강화하려 공부하고 프로젝트를 하며 준비했는데, 취업준비가 길어지면서 알 수 없는 갑갑함을 느끼게 됐습니다. <br/>
+            분명히 저의 역량이 부족해서 개발자 시장도 좋지 않아서 취업이 쉽게 되지는 않았겠지만, 하루하루 지나가면서 제 자신이 취업을 위한 공부를 하는 건지 뭔지 의심을 시작했고 결국 제 자신을 모르게 됐습니다. <br/>
+            나는 분명 새로운 것을 배우고 무엇인가 빌딩한다는 것, 나의 코드를 이용해 누군가 또 개발을 할 수 있다는 것, 나의 개발이 비지니스 측면에 도움이 된다는 것 또는 그 이상들이 좋아서 해당 직무를 선택했는데 점점 그런 의미가 희석되는 것처럼 느껴졌습니다. 
         </p>
         <p style="font-family: 'Pretendard-Regular';">
             <a style="font-weight: bold; border-bottom: none;">
             이제 security 관한 아키텍쳐에 대하여 설명드리겠습니다.</br>
             </a>
             <a style="font-weight: bold; border-bottom: none;">
-            1. 왜 토큰 기반의 인증 서버인가? </br>
+            1. "왜 토큰 기반의 인증 서버인가?" </br>
             </a>
-                        <img
+        <img
             src="images/blog_img/authorization_logic.png"
             alt="authorization_logic"
             style="width:50%"
@@ -184,6 +191,16 @@ Blog
             사용자 검증이 필요한 api는 모두 token 검증 과정을 거칩니다. <br/>
             또한 Access token의 expexpiration time은 1시간으로 설정하여 클라이언트에서 access token 없이 refresh token만 존재함을 감지하면<br/>
             백엔드의 access token 재발급 api로 refresh token을 보내 검증 후 access token을 재발급하여 보내주고 다시 쿠키에 저장시키게끔 하였습니다. <br/>
+            이러한 architecture로 인하여 serverless architecture에서도 보안 설정을 할 수 있게 되었습니다. <br/>
+        </p>
+        <p style="font-family: 'Pretendard-Regular';">
+            <a style="font-weight: bold; border-bottom: none;">
+            2. "왜 Next JS proxy를 사용하나?" </br>
+            </a>
+            먼저 proxy 설정을 하는 이유는 api path와 api key 등 민감할 수 있는 정보를 숨기기 위해 했습니다. <br/>
+            원래는 AWS 의 proxy 서비스를 사용하려 했지만 Next js에서 간단하고 강력한 proxy 설정을 지원하기에 선택했습니다. <br/>
+            현재 architecture는 api를 next js 자체 path에 요청시키고 next js 서버에서 마지막에 실제 운용되는 서버로 우회되게 설정했습니다. <br/> 
+            이와 같은 architecture로 운용되는 서버의 api path, key 등 민감할 수 있는 정보를 숨길 수 있게 되었습니다. <br/>
         </p>
     </p>
     <hr style="margin: 1rem 0px 1rem 0px;">
