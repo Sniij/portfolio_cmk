@@ -2,7 +2,7 @@
 <!-- Post -->
 <section class="post">
     <header class="major">
-    <span class="date">December 05, 2023</span>
+    <span class="date">March 11, 2024</span>
     <h1><a>Introduce myself</a></h1>
     <p style="font-family: 'Pretendard-Regular'; font-style: normal">
         작업물에 대한 것은
@@ -78,7 +78,7 @@
 <div class="image main" style="margin: 0">
 <a class="image main" style="margin: 0"
     ><img
-    src="images/tech_stack2.png"
+    src="images/tech_stack_reduce.png"
     alt=""
     style="width: 97%; float: right"
 /></a>
@@ -97,7 +97,9 @@ style="
 >
 Language
 </p>
-    -Java(11) : 기본문법을 이해하고 있으며 객체지향 프로그래밍 설계를 지탱하는 핵심적인 4가지 기둥인 상속성, 캡슐화, 다형성, 추상화를 기반으로한 코드 설계를 지향합니다.<br/><br/>
+
+- Java(11) : 기본문법을 이해하고 있으며 객체지향 프로그래밍 설계를 지탱하는 핵심적인 4가지 기둥인 상속성, 캡슐화, 다형성, 추상화를 기반으로한 코드 설계를 지향합니다.<br/>
+
 <p
 style="
     font-family: 'Pretendard-Regular';
@@ -107,14 +109,15 @@ style="
 >
 Framework, Library
 </p>
--Gradle : 각 작업에 필요한 라이브러리를 Maven Central 등에서 호환성을 직접 맞출 수 있으며 Rest Docs, CI/CD 를 위한 스크립트를 작성한 경험이 있습니다.<br/>
--Spring Boot : Spring MVC 패턴을 기반으로 Restful한 API를 개발한 경험이 있습니다.<br/>
--Spirng Data JPA : Spirng Data JPA 에서 생성되는 쿼리에서 성능 개선을 위해 직접 쿼리를 설계한 경험이 있습니다. <br/>
--Spring Security : Spring 기반 어플리케이션에서 JWT 를 이용한 인증, 인가를 구현과 OAuth2.0을 사용한 경험이 있습니다.<br/>
--Spring Rest Docs : Mockito 를 이용하여 Spring Rest Docs API 문서를 생성한 경험이 있습니다.<br/>
--Spring Cloud : Spring cloud 를 통해 AWS S3 client 사용과 Parameter Store 를 사용하여 비밀 정보를 관리한 경험이 있습니다.<br/>
--RestTemplate : RestTemplate 를 이용하여 외부 API를 호출하여 사용한 경험이 있습니다.<br/>
--Qurey DSL : Query dsl 을 통해 native query를 대신하여 복잡한 query를 가독성있고 편하게 사용하고 JPA 와 함꼐 사용하여 객체로 불러와 사용한 경험이 있습니다.<br/><br/>
+
+- Gradle : 각 작업에 필요한 라이브러리를 Maven Repository 등을 통해 호환성을 직접 맞출 수 있으며 멀티모듈의 버전 통합관리, Rest Docs, CI/CD 를 위한 스크립트를 작성한 경험이 있습니다.<br/>
+- Spring Boot : Spring MVC 패턴을 기반으로 RESTful한 API를 개발한 경험이 있습니다.<br/>
+- Spring Data JPA : Spring Data JPA 에서 생성되는 쿼리에서 성능 개선을 위해 직접 쿼리를 설계한 경험이 있습니다. <br/>
+- Spring Security : Spring 기반 어플리케이션에서 JWT 를 이용한 인증, 인가의 구현과 OAuth2.0을 사용한 경험이 있습니다.<br/>
+- Spring Mockito : 테스트 코드의 간소화를 위해 Mockito를 사용하였습니다. <br/>
+- Spring Rest Docs : 테스트 코드에서 자동으로 빌드되는 Spring Rest Docs API 문서를 생성한 경험이 있습니다.<br/>
+- RestTemplate : RestTemplate 를 이용하여 외부 API를 호출하여 사용한 경험이 있습니다.<br/>
+
 <p
 style="
     font-family: 'Pretendard-Regular';
@@ -124,7 +127,9 @@ style="
 >
 Database
 </p>
--MySQL, PostgreSQL : 관계형 데이터베이스를 이해하고 있으며 기본적인 설계를 할 수 있습니다. 테이블 구조 데이터모델링의 엔티티와 연관관계를 구현한 경험이 있습니다.<br/><br/>
+
+- MySQL, PostgreSQL : 관계형 데이터베이스를 이해하고 있으며 기본적인 설계를 할 수 있습니다. 테이블 구조 데이터모델링의 엔티티와 연관관계를 구현한 경험이 있습니다. <br/>
+
 <p
 style="
     font-family: 'Pretendard-Regular';
@@ -134,11 +139,29 @@ style="
 >
 The others
 </p>
-- Git : 팀 프로젝트에서 Git strategy 를 직접 설계하여 convention 과 함께 프로젝트 관리를 주도한 경험이 있습니다.<br/>
-- Github : Github actions 를 위한 스크립트를 작성하여 client, server 자동 배포를 구성한 경험이 있습니다.<br/>
+
+- Git, GitHub : 팀 프로젝트에서 Git strategy 를 직접 설계하여 convention 과 함께 프로젝트 관리를 주도한 경험이 있습니다. GitHub actions 를 위한 스크립트를 작성하여 client, server 자동 배포를 구성한 경험이 있습니다.<br/>
 - AWS : Https to Https 배포, 배포환경에서의 개발 환경 구성, Cloud watch 를 통한 RDS 모니터링, IAM 관리를 한 경험이 있으며 이에 필요한 네트워크 지식을 직접 공부하였습니다.<br/>
+- AWS Lambda + API Gateway : Serverless Architecture 를 AWS lambda + API Gateway 통해 Spring boot 멀티모듈로 구성한 경험이 있습니다. <br/>
 - Notion : 팀 프로젝트에서 규칙, 기한, 정보 공유 등을 위한 커뮤니케이션 툴로써 활용한 경험이 있습니다.<br/>
-- Flyway : DB 마이그레이션을 위해 PostgreSQL과 같이 사용하여 데이터 버전 관리를 통해 데이터의 무결성에 힘쓴 경험이 있습니다.<br/><br/>
+
+
+<p
+style="
+    font-family: 'Pretendard-Regular';
+    font-weight: bold;
+    margin: 0;
+"
+>
+아래는 프로젝트에 녹여낸 경험이 있지만 아직은 미숙하다고 생각되는 목록입니다.
+</p>
+
+- PostgreSQL : postgreSQL 만의 특성은 활용하지 못하지만, 관계형 데이터베이스를 이해하고 있으며 기본적인 설계를 할 수 있습니다. <br/>
+- Qurey DSL : Query dsl 을 통해 native query를 대신하여 복잡한 query를 가독성있고 편하게 사용하고 JPA 와 함께 사용하여 객체로 불러와 사용한 경험이 있습니다. <br/>
+- Spring Cloud : Spring cloud 를 통해 AWS S3 client 사용과 Parameter Store 를 사용하여 비밀 정보를 관리한 경험이 있습니다. <br/>
+- MongoDB, Redis : NoSQL의 읽기 속도가 빠른 특성을 살려 프로젝트에 적용한 경험이 있습니다. <br/>
+- Flyway : DB 마이그레이션을 위해 PostgreSQL과 같이 사용하여 데이터 버전 관리를 통해 데이터의 무결성에 힘쓴 경험이 있습니다.<br/>
+
 </div>
         </section>
       </div>
