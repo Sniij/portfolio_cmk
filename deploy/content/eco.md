@@ -5,7 +5,7 @@
 <div id="modal_inContent" style="position: inherit; text-align: left; font-family: 'KBO-Dia-Gothic_bold';">
     <h3>🔗 URLs</h3>
     <p>
-        Github : <a href="https://github.com/Sniij/portfolio_cmk" target="_blank">https://github.com/Sniij/eco</a><br/>
+        Github : <a href="https://github.com/Sniij/eco" target="_blank">https://github.com/Sniij/eco</a><br/>
     </p>
     <hr style="margin: 1rem 0px 1rem 0px;">
     <h3>🛒 Skills</h3>
