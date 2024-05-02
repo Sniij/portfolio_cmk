@@ -140,10 +140,10 @@ style="
 The others
 </p>
 
-- Git, GitHub : 팀 프로젝트에서 Git strategy 를 직접 설계하여 convention 과 함께 프로젝트 관리를 주도한 경험이 있습니다. GitHub actions 를 위한 스크립트를 작성하여 client, server 자동 배포를 구성한 경험이 있습니다.<br/>
+- Git, GitHub, GitHub Actions : 팀 프로젝트에서 Git strategy 를 직접 설계하여 convention 과 함께 프로젝트 및 버전 관리를 주도한 경험이 있습니다. GitHub actions 를 위한 스크립트를 작성하여 client, server 자동 배포를 구성한 경험이 있습니다.<br/>
 - AWS : Https to Https 배포, 배포환경에서의 개발 환경 구성, Cloud watch 를 통한 RDS 모니터링, IAM 관리를 한 경험이 있으며 이에 필요한 네트워크 지식을 직접 공부하였습니다.<br/>
 - AWS Lambda + API Gateway : Serverless Architecture 를 AWS lambda + API Gateway 통해 Spring boot 멀티모듈로 구성한 경험이 있습니다. <br/>
-- Notion : 팀 프로젝트에서 규칙, 기한, 정보 공유 등을 위한 커뮤니케이션 툴로써 활용한 경험이 있습니다.<br/>
+- Notion : 팀 프로젝트에서 규칙, 기한, 정보 공유 등을 위한 커뮤니케이션 툴로써 활용한 경험이 있습니다.<br/><br/>
 
 
 <p
@@ -159,7 +159,7 @@ style="
 - PostgreSQL : postgreSQL 만의 특성은 활용하지 못하지만, 관계형 데이터베이스를 이해하고 있으며 기본적인 설계를 할 수 있습니다. <br/>
 - Qurey DSL : Query dsl 을 통해 native query를 대신하여 복잡한 query를 가독성있고 편하게 사용하고 JPA 와 함께 사용하여 객체로 불러와 사용한 경험이 있습니다. <br/>
 - Spring Cloud : Spring cloud 를 통해 AWS S3 client 사용과 Parameter Store 를 사용하여 비밀 정보를 관리한 경험이 있습니다. <br/>
-- MongoDB, Redis : NoSQL의 읽기 속도가 빠른 특성을 살려 프로젝트에 적용한 경험이 있습니다. <br/>
+- MongoDB, Redis :  NoSQL의 특징을 이해하고 RDB와의 다른 점을 인지하고 구별하여 사용할 수 있습니다. NoSQL의 읽기 속도가 빠른 특성을 살려 프로젝트에 적용한 경험이 있습니다. <br/>
 - Flyway : DB 마이그레이션을 위해 PostgreSQL과 같이 사용하여 데이터 버전 관리를 통해 데이터의 무결성에 힘쓴 경험이 있습니다.<br/>
 
 </div>

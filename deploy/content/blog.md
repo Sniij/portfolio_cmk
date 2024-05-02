@@ -137,8 +137,9 @@ Blog
             4. 1차적으로 캐싱되는 DB로서의 architecture를 염두에 두고 고르고 싶다. <br/>
             5. Java, NodeJS 기반에서의 API를 많이 지원했으면 좋겠다. <br/>
             위 5가지의 고민에서 초기엔 Upstash의 Redis 정도만 사용해도 충분할 것 같다는 판단이 들어서 Upstash의 Redis를 선택하였습니다. <br/>
-            다만 현재는 캐싱되는 DB로만 사용하고 있지는 않기 때문에 조회수 domain을 만들어 api 를 생성하는 것보다 <br/>
-            클라이언트에서 redis 와 연결시켜 조회수만 올릴 수 있는 api를 만들어 운용하기로 아키텍쳐를 구성하였습니다. <br/>
+            다만 현재는 캐싱되는 DB로 사용하고 있지는 않기 때문에 조회수 domain을 만들어 api 를 생성하는 것보다 <br/>
+            프론트엔드에서만 redis 와 연결시켜 조회수만 올릴 수 있는 api를 만들어 운용하기로 아키텍쳐를 구성하였습니다. <br/>
+            이는 추후에 분산 처리에 대한 공부를 한 이후에 적용시켜볼 예정입니다. <br/>
         </p>
         <p style="font-family: 'Pretendard-Regular';">
             <a style="font-weight: bold; border-bottom: none;">
