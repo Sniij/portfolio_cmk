@@ -15,6 +15,13 @@
         - Deployment : Github action, AWS S3, AWS CloudFront, AWS Route 53
     </p>
     <hr style="margin: 1rem 0px 1rem 0px;">
+    <h3>⛓ Architecture</h3>
+    <p>
+        <a href="images/portfolio_img/portfolio_archi.png" target="_blank" class="image main" style="width: 70%;">
+                    <img src="images/portfolio_img/portfolio_archi.png" alt="portfolio_archi.png"/>
+        </a>
+    </p>
+        <hr style="margin: 1rem 0px 1rem 0px;">
     <h3>📚 Summary</h3>
     <p style="font-family: 'Pretendard-Regular';">
         제 포트폴리오를 작성하면서 PDF 등의 표현으로만은 아쉬워 직접 포트폴리오 웹을 만들어보고자 제작하게 됐습니다.

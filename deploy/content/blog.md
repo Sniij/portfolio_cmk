@@ -16,8 +16,9 @@ Blog
     <hr style="margin: 1rem 0px 1rem 0px;">
     <h3>🛒 Skills</h3>
     <p style="font-family: 'Pretendard-Regular';">
-        - Back-end : Java 17, Spring boot 3, Spring Security(OAuth2+JWT), MongoDB, AWS(Lambda, API Gateway)   <br/>
-        - Front-end : TypeScript, Next JS 13, tailwind css, content layer, Redis, AWS(Route 53), Vercel(Deploy)  <br/>
+        - Back-end : Java 17, Spring boot 3, Spring Security(OAuth2+JWT), MongoDB Atlas, Redis <br/>
+        - Front-end : TypeScript, Next JS 13, tailwind css, content layer <br/>
+        - DevOps : GitHub Actions, AWS(Route 53, API Gateway, Lambda), Vercel <br/>
     </p>
     <hr style="margin: 1rem 0px 1rem 0px;">
     <h3>📚 Summary</h3>
@@ -27,6 +28,13 @@ Blog
     </p>
     <hr style="margin: 1rem 0px 1rem 0px;">
     <h3>⛓ Architecture</h3>
+    <p>
+        - Full: <br/>
+        <a href="images/blog_img/blog_archi.png" target="_blank" class="image main" style="width: 70%;">
+                    <img src="images/blog_img/blog_archi.png" alt="blog_archi.png"/>
+        </a>
+    </p>
+        <hr style="margin: 1rem 0px 1rem 0px;">
     <p>
         - Back:  <br/>
             <img
