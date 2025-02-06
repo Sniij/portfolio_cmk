@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-    var markdownFiles = ["content/introduce.md","content/dowajoyak.md", "content/portfolio.md", "content/petching.md", "content/eco.md", "content/blog.md"];
-    var targetElements = ["#mark-introduce","#modal-dowajoyak", "#modal-portfolio", "#modal-petching", "#modal-parking", "#modal-blog"];
+    var markdownFiles = ["content/introduce.md","content/dowajoyak.md", "content/portfolio.md", "content/petching.md", "content/eco.md", "content/blog.md", "content/msg.md"];
+    var targetElements = ["#mark-introduce","#modal-dowajoyak", "#modal-portfolio", "#modal-petching", "#modal-parking", "#modal-blog", "#modal-msg"];
 
     for (var i = 0; i < markdownFiles.length; i++) {
         $.ajax({
@@ -47,6 +47,11 @@ $(document).ready(function() {
             const bootstrapModal = new bootstrap.Modal(modalBlog);
             bootstrapModal.show();
         }
+            else if(window.location.hash === "#modal_msg"){
+            const modalMsg = document.getElementById("modal_msg");
+            const bootstrapModal = new bootstrap.Modal(modalMsg);
+            bootstrapModal.show();
+        }
 
       document.getElementById("modalPortfolio").addEventListener("click", function(){
           window.location.hash = "#modal_portfolio";
@@ -63,7 +68,9 @@ $(document).ready(function() {
     document.getElementById("modalBlog").addEventListener("click", function(){
         window.location.hash = "#modal_blog";
     });
-
+    document.getElementById("modalMsg").addEventListener("click", function(){
+        window.location.hash = "#modal_msg";
+    });
 
       document.getElementById("modalDowajoyakClose").addEventListener("click", function () {
           history.replaceState(null,null,'generic.html');
@@ -78,6 +85,9 @@ $(document).ready(function() {
         history.replaceState(null,null,'generic.html');
     });
     document.getElementById("modalBlogClose").addEventListener("click", function () {
+        history.replaceState(null,null,'generic.html');
+    });
+    document.getElementById("modalMsgClose").addEventListener("click", function () {
         history.replaceState(null,null,'generic.html');
     });
 });
